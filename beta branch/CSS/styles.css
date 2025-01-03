@@ -1,5 +1,9 @@
 body {
   background: radial-gradient(#1c2541, #161d39);
+  font-family: "Teko", serif;
+  font-optical-sizing: auto;
+  font-weight: 10em;
+  font-style: normal;
 }
 
 header {
@@ -8,13 +12,13 @@ header {
   margin-top: 2%;
   margin-bottom: 2%;
   background-color: #0b132b;
-  height: 7%;
+  height: 4%;
   margin-left: 3%;
   margin-right: 3%;
   border-radius: 2em;
   box-shadow: black 2px 2px 10px;
 }
-/* hgshdddd */
+
 .menu {
   display: flex;
   align-items: center; 
@@ -23,15 +27,21 @@ header {
   height: 100%;
 }
 
-.menu > h1 {
+.buttons_right {
+  display: flex;
+  position: relative;
+  width: 45%;
+  justify-content: center;
+  text-align: center;
+}
+
+.buttons_right > h1 {
   margin: 0; 
-  padding-left: 1em; 
-  text-align: left; 
   color: white;
   z-index: 1;
-  margin-left: 5%;
-  margin-right: 3em;
-  font-size: 1.4em ;
+  font-size: 1.3em;
+  flex-grow: 4;
+  align-items: center;
 }
 
 
@@ -40,8 +50,8 @@ header {
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  width: 7em;
-  height: 7em;
+  width: 5em;
+  height: 5em;
   border-radius: 50%;
   border: 0.3em solid #0b132b; /* L'anneau autour de l'image */
   display: flex;
@@ -101,5 +111,10 @@ header {
   
   .carousel-item[data-index="2"] {
     transform: translateX(300px) scale(0.8);
+    opacity: 0.6;
+  }
+
+  .carousel-item[data-index="3"] {
+    transform: translateX(600px) scale(0.8);
     opacity: 0.6;
   }
