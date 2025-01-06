@@ -106,7 +106,7 @@ h2{
     align-items: top;
     position: relative;
     width: 100%;
-    height: 50%;
+    height: 70%;
     overflow: hidden;
   }
 
@@ -115,7 +115,7 @@ h2{
     width: 95%;
     margin: auto;
     margin-top: 3%;
-    border-radius: 5%;
+    border-radius: 1em;
   }
   
   .carousel-item {
@@ -124,12 +124,50 @@ h2{
     position: absolute;
     background-color: #0b132b ;
     border: #0b132b 4px solid;
-    border-radius: 5%;
+    border-radius: 1em;
     width: 200px;
-    height: 300px;
+    height: auto;
     object-fit: cover;
     transition: transform 0.5s ease, opacity 0.5s ease;
     color: white;
+  }
+
+  .carousel-item > h4{
+    margin-top: 5%;
+    margin-left: 5%;
+    margin-right: 5%;
+    font-size: 2em;
+    text-align: center;
+  }
+
+  .carousel-item > .price{
+    display: flex;
+    justify-content: space-around;
+    padding-top: 5%;
+    padding-bottom: 2%;
+  }
+
+  .oldprice{
+    text-decoration:line-through 3px black;
+    font-size: 1.5em;
+    color: rgb(184, 22, 22);
+  }
+
+  .newprice{
+    font-size: 2em;
+    color: rgb(41, 141, 46);
+  }
+
+  .carousel-item > p{
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 0.8em;
+    margin-top: 5%;
+    margin-left: 5%;
+    margin-right: 5%;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    border-top: white 2px solid;
+    border-bottom: white 2px solid;
   }
   
   .carousel-item::after {
@@ -139,9 +177,9 @@ h2{
     top: 0.1em; /* Ajuste l'espace entre l'anneau et le bord de l'image */
     left: 0,1em;
     width: calc(95% + 0.5em); /* Largeur de l'anneau */
-    height: calc(95% + 0.5em); /* Hauteur de l'anneau */
+    height: calc(97% + 0.5em); /* Hauteur de l'anneau */
     border: 0.1em solid rgb(255, 255, 255); /* Taille et couleur de l'anneau */
-    border-radius: 6%; /* Forme circulaire */
+    border-radius: 1em; /* Forme circulaire */
     z-index: -1; /* Place l'anneau derrière l'image */
     box-sizing: border-box; /* S'assure que les dimensions incluent la bordure */
   }
