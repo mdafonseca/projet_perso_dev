@@ -158,6 +158,20 @@ h2{
     color: rgb(41, 141, 46);
   }
 
+  .reductionticket>h5{
+    position: absolute;
+    height: 20%;
+    top: -2em;
+    transform: translatex(10em);
+  }
+
+  .reductionticket>img{
+    position: fixed;
+    height: 20%;
+    top: -2em;
+    transform: translatex(10em);
+  }
+
   .carousel-item > p{
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 0.8em;
