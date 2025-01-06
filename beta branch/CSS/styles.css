@@ -61,7 +61,7 @@ header {
   width: 5em;
   height: 5em;
   border-radius: 50%;
-  border: 0.3em solid #0b132b; /* L'anneau autour de l'image */
+  border: 0.4em solid #0b132b; /* L'anneau autour de l'image */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -70,16 +70,21 @@ header {
 
 .image-container::after {
   content: ""; /* Nécessaire pour afficher le pseudo-élément */
+  align-self: center;
   position: absolute;
   top: -0.1em; /* Ajuste l'espace entre l'anneau et le bord de l'image */
   left: -0.1em;
-  width: calc(100% + 0.4em); /* Largeur de l'anneau */
+  width: calc(100% + 0.25em); /* Largeur de l'anneau */
   height: calc(100% + 0.2em); /* Hauteur de l'anneau */
   border: 0.1em solid rgb(255, 255, 255); /* Taille et couleur de l'anneau */
-  border-radius: 50%; /* Forme circulaire */
+  border-radius: 100%; /* Forme circulaire */
   z-index: -1; /* Place l'anneau derrière l'image */
   box-sizing: border-box; /* S'assure que les dimensions incluent la bordure */
-  box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+.image-container:hover{
+  box-shadow: 0 0 25px rgba(255, 255, 255, 0.5);
+  transition-duration: 0.4s;
 }
 
 .image-container > img {
@@ -88,6 +93,12 @@ header {
   border-radius: 50%; /* Image ronde */
 }
 
+h2{
+  text-align: center;
+  color: white;
+  padding-top:0.5em ;
+  font-size: 3em;
+}
 
 .carousel {
     display: flex;
@@ -95,25 +106,53 @@ header {
     align-items: top;
     position: relative;
     width: 100%;
-    height: 300px;
+    height: 50%;
     overflow: hidden;
+  }
+
+  .carousel-item>.productimage{
+    height: 95%;
+    width: 95%;
+    margin: auto;
+    margin-top: 3%;
+    border-radius: 5%;
   }
   
   .carousel-item {
+    display: flex;
+    flex-direction: column;
     position: absolute;
+    background-color: #0b132b ;
+    border: #0b132b 4px solid;
+    border-radius: 5%;
     width: 200px;
-    height: 200px;
+    height: 300px;
     object-fit: cover;
     transition: transform 0.5s ease, opacity 0.5s ease;
+    color: white;
   }
   
+  .carousel-item::after {
+    content: ""; /* Nécessaire pour afficher le pseudo-élément */
+    align-self: center;
+    position: absolute;
+    top: 0.1em; /* Ajuste l'espace entre l'anneau et le bord de l'image */
+    left: 0,1em;
+    width: calc(95% + 0.5em); /* Largeur de l'anneau */
+    height: calc(95% + 0.5em); /* Hauteur de l'anneau */
+    border: 0.1em solid rgb(255, 255, 255); /* Taille et couleur de l'anneau */
+    border-radius: 6%; /* Forme circulaire */
+    z-index: -1; /* Place l'anneau derrière l'image */
+    box-sizing: border-box; /* S'assure que les dimensions incluent la bordure */
+  }
+
   .carousel-item[data-index="0"] {
     transform: translateX(-300px) scale(0.8);
     opacity: 0.6;
   }
   
   .carousel-item[data-index="1"] {
-    transform: translateX(0) translateY(100px) scale(1);
+    transform: translateX(0) translateY(4em) scale(1);
     opacity: 1;
   }
   
