@@ -21,7 +21,8 @@ header {
 
 .menu {
   display: flex;
-  align-items: center; 
+  align-items: center;
+  justify-content: baseline; 
   position: relative;
   width: 100%;
   height: 100%;
@@ -31,17 +32,24 @@ header {
   display: flex;
   position: relative;
   width: 45%;
-  justify-content: center;
+  justify-content: space-evenly;
   text-align: center;
 }
 
-.buttons_right > h1 {
+.buttons_right>button:hover{
+  color: rgb(211, 211, 211);
+  transition-duration: 0.2s;
+}
+
+.buttons_right > button {
+  background: none;
+  border: none;
+  outline: none;
+  box-shadow: none;
   margin: 0; 
   color: white;
   z-index: 1;
   font-size: 1.3em;
-  flex-grow: 4;
-  align-items: center;
 }
 
 
@@ -65,8 +73,8 @@ header {
   position: absolute;
   top: -0.1em; /* Ajuste l'espace entre l'anneau et le bord de l'image */
   left: -0.1em;
-  width: calc(100% + 0.1em); /* Largeur de l'anneau */
-  height: calc(100% + 0.1em); /* Hauteur de l'anneau */
+  width: calc(100% + 0.4em); /* Largeur de l'anneau */
+  height: calc(100% + 0.2em); /* Hauteur de l'anneau */
   border: 0.1em solid rgb(255, 255, 255); /* Taille et couleur de l'anneau */
   border-radius: 50%; /* Forme circulaire */
   z-index: -1; /* Place l'anneau derrière l'image */
@@ -84,7 +92,7 @@ header {
 .carousel {
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: top;
     position: relative;
     width: 100%;
     height: 300px;
@@ -105,7 +113,7 @@ header {
   }
   
   .carousel-item[data-index="1"] {
-    transform: translateX(0) scale(1);
+    transform: translateX(0) translateY(100px) scale(1);
     opacity: 1;
   }
   
@@ -117,4 +125,24 @@ header {
   .carousel-item[data-index="3"] {
     transform: translateX(600px) scale(0.8);
     opacity: 0.6;
+  }
+
+  footer{
+    display: flex;
+    color: white;
+    padding: 2%;
+    transform:translateY(32em);
+    justify-content: center;
+    font-size: 0.8em;
+  }
+
+  footer>h3{
+    font-family: Arial, Helvetica, sans-serif;
+    align-content: center;
+  }
+
+  .lgcopyright{
+    height: 1.5em;
+    width: 1.5em;
+    padding-right: 0.5em;
   }
