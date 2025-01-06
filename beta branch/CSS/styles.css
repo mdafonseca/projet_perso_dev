@@ -26,9 +26,10 @@ header {
   position: relative;
   width: 100%;
   height: 100%;
+  justify-content: space-between;
 }
 
-.buttons_right {
+.buttons_left {
   display: flex;
   position: relative;
   width: 45%;
@@ -36,12 +37,66 @@ header {
   text-align: center;
 }
 
-.buttons_right>button:hover{
+.buttons_right{
+  display: flex;
+  width: 45%;
+  justify-content: flex-start;
+  gap: 6em;
+  align-items: center;
+}
+
+.search{
+  display: flex;
+  height: 100%;
+  width: 50%;
+}
+
+.validate_research{
+  width: 20%;
+}
+
+.search>#site-search{
+  background: none;
+  border: none;
+  outline: none;
+  box-shadow: none;
+  background-color: #ffffff;
+  border-top-left-radius: 5em;
+  border-bottom-left-radius: 5em;
+  position: relative;
+  gap: 6em;
+  height: 100%;
+  width: 50%;
+  align-items: center;
+}
+
+.spyglass{
+  width: 21%;
+  height: 100%;
+}
+
+.socials{
+  display: flex;
+  gap: 2em;
+  width: 45%;
+  height: 100%;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+
+.socials>a{
+  height: 100%;
+  width: 7%;
+  justify-content: center;
+}
+
+.buttons_left>button:hover{
   color: rgb(211, 211, 211);
   transition-duration: 0.2s;
 }
 
-.buttons_right > button {
+.buttons_left > button {
   background: none;
   border: none;
   outline: none;
@@ -123,6 +178,7 @@ h2{
     flex-direction: column;
     position: absolute;
     background-color: #0b132b ;
+    box-shadow: black 1px 1px 10px;
     border: #0b132b 4px solid;
     border-radius: 1em;
     width: 200px;
@@ -150,23 +206,25 @@ h2{
   .oldprice{
     text-decoration:line-through 3px black;
     font-size: 1.5em;
-    color: rgb(184, 22, 22);
+    color: rgb(255, 0, 0);
   }
 
   .newprice{
     font-size: 2em;
-    color: rgb(41, 141, 46);
+    color: rgb(0, 255, 13);
   }
 
   .reductionticket>h5{
     position: absolute;
     height: 20%;
-    top: -2em;
-    transform: translatex(10em);
+    top: -0.4em;
+    transform: translatex(5.5em);
+    font-size: 2em;
+    z-index: 1;
   }
 
   .reductionticket>img{
-    position: fixed;
+    position: absolute;
     height: 20%;
     top: -2em;
     transform: translatex(10em);
@@ -222,7 +280,7 @@ h2{
     display: flex;
     color: white;
     padding: 2%;
-    transform:translateY(32em);
+    transform:translateY(3em);
     justify-content: center;
     font-size: 0.8em;
   }
